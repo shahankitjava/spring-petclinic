@@ -17,7 +17,7 @@
   <properties>
 
     <!-- Generic properties -->
-    <java.version>11</java.version>
+    <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -26,7 +26,7 @@
     <webjars-bootstrap.version>3.3.6</webjars-bootstrap.version>
     <webjars-jquery-ui.version>1.11.4</webjars-jquery-ui.version>
     <webjars-jquery.version>2.2.4</webjars-jquery.version>
-    <wro4j.version>1.9.0</wro4j.version>
+    <wro4j.version>1.8.0</wro4j.version>
     <thymeleaf.version>3.0.15.RELEASE</thymeleaf.version>
 
     <cobertura.version>2.7</cobertura.version>
@@ -79,8 +79,8 @@
 
     <!-- Databases - Uses HSQL by default -->
     <dependency>
-      <groupId>org.hsqldb</groupId>
-      <artifactId>hsqldb</artifactId>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
       <scope>runtime</scope>
     </dependency>
     <dependency>

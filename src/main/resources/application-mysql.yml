@@ -1,0 +1,9 @@
+database: mysql
+spring:
+  datasource:
+      password: secret@123
+      url: jdbc:mysql://localhost/petclinic?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      username: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect

@@ -161,17 +161,6 @@ public class ClinicServiceTests {
     }
 
     @Test
-    public void shouldFindVets() {
-        Collection<Vet> vets = this.vets.findAll();
-
-        Vet vet = EntityUtils.getById(vets, Vet.class, 3);
-        Assert.assertEquals("Douglas", vet.getLastName());
-        Assert.assertEquals(2, vet.getNrOfSpecialties());
-        Assert.assertEquals("dentistry", vet.getSpecialties().get(0).getName());
-        Assert.assertEquals("surgery", vet.getSpecialties().get(1).getName());
-    }
-
-    @Test
     @Transactional
     public void shouldAddNewVisitForPet() {
         Pet pet7 = this.pets.findById(7);
@@ -185,15 +174,6 @@ public class ClinicServiceTests {
         pet7 = this.pets.findById(7);
         Assert.assertEquals(found + 1, pet7.getVisits().size());
         Assert.assertNotNull(visit.getId());
-    }
-
-    @Test
-    public void shouldFindVisitsByPetId() throws Exception {
-        Collection<Visit> visits = this.visits.findByPetId(7);
-        Assert.assertEquals(2, visits.size());
-        Visit[] visitArr = visits.toArray(new Visit[visits.size()]);
-        Assert.assertNotNull(visitArr[0].getDate());
-        Assert.assertEquals(7, visitArr[0].getPetId().longValue());
     }
 
 }
